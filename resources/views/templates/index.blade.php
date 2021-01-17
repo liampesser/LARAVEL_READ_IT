@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
+  <head>
+    @include('templates.partials._head')
+  </head>
+  <body>
+    
+    @include('templates.partials._nav')
+    @include('templates.partials._hero')
+    @include('templates.partials._main')
+    @include('templates.partials._footer')
+    @include('templates.partials._loader')
+    @include('templates.partials._scripts')
 
-</body>
+  </body>
 </html>

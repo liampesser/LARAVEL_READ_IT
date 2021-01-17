@@ -2,6 +2,4 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function() {
-  return "<h1>Coucou</h1>";
-});
+Route::view('/', 'templates.index');
