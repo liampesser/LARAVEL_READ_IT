@@ -9,6 +9,9 @@ class Tag extends Model
 {
     use HasFactory;
 
+    /**
+     * GETTER des posts du tag
+     */
     public function posts() {
       return $this->belongsToMany('App\Models\Post', 'posts_has_tags');
     }

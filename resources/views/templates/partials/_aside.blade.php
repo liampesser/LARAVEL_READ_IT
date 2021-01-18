@@ -1,4 +1,4 @@
-<!-- PARTIAL SIDEBAR  -->
+<!-- PARTIAL ASIDE  -->
 
 <!-- .col-md-8 -->
 <div class="col-lg-4 sidebar pl-lg-5 ftco-animate">

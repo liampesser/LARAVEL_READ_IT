@@ -16,15 +16,23 @@ class Post extends Model
       return $this->belongsTo('App\Models\Author');
     }
 
+    /**
+     * GETTER de la categorie du post
+     */
     public function categorie () {
       return $this->belongsTo('App\Models\Categorie');
     }
 
+    /**
+     * GETTER des commentaires du post
+     */
     public function comment () {
       return $this->belongsTo('App\Models\Comment');
     }
 
-
+    /**
+     * GETTER des tags du post
+     */
     public function tags () {
       return $this->belongsToMany('App\Models\Tag' , 'posts_has_tags');
     }
