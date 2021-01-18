@@ -8,8 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Comment extends Model
 {
     use HasFactory;
-    
-    public function posts() {
-      return $this->hasMany('App\Models\Post');
+
+    /**
+     * GETTER du user à qui appartient ce post.
+     */
+    public function post(){
+        return $this->belongsTo('App\Models\Post');
     }
 }

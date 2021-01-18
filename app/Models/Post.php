@@ -24,10 +24,10 @@ class Post extends Model
     }
 
     /**
-     * GETTER des commentaires du post
+     * GETTER des comments du post.
      */
-    public function comment () {
-      return $this->belongsTo('App\Models\Comment');
+    public function comments() {
+        return $this->hasMany('App\Models\Comment');
     }
 
     /**
