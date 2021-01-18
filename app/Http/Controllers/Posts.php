@@ -8,6 +8,11 @@ use App\Models\Post;
 
 class Posts extends Controller
 {
+    /**
+     * [index description]
+     * @param  integer $limit [description]
+     * @return [type]         [description]
+     */
     public function index(INT $limit = 10) {
       // $posts = DB::table('posts')
       //            ->join('categories','categorie_id','=','categories.id')
@@ -21,7 +26,13 @@ class Posts extends Controller
 
       return view('posts.index', compact('posts'));
     }
-    public function show (Post $post) {
+
+    /**
+     * [show description]
+     * @param  Post   $post [description]
+     * @return [type]       [description]
+     */
+    public function show (Post $post) { // récupère le paramètre Post pour ne pas avoir besoin de faire un Find
       return view('posts.show', compact('post'));
     }
 
