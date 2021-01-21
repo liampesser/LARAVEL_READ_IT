@@ -19,8 +19,8 @@
         <div class="ftco-footer-widget mb-4 ml-md-5">
           <h2 class="ftco-heading-2">Information</h2>
           <ul class="list-unstyled">
-            <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Home</a></li>
-            <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Contact</a></li>
+            <li><a href="{{ route('blog') }}" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Home</a></li>
+            <li><a href="{{ route('contacts.form') }}" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Contact</a></li>
           </ul>
         </div>
       </div>

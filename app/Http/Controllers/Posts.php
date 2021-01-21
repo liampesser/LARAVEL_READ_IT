@@ -20,7 +20,7 @@ class Posts extends Controller
       //            ->take(10)
       //            ->get();
 
-      $posts = Post::orderBy('created_at', 'DESC')
+      $posts = Post::orderBy('created_at', 'desc')
                    ->take($limit)
                    ->get();
 
@@ -34,6 +34,21 @@ class Posts extends Controller
      */
     public function show (Post $post) { // récupère le paramètre Post pour ne pas avoir besoin de faire un Find
       return view('posts.show', compact('post'));
+    }
+
+    /**
+     * [more description]
+     * @return [type] [description]
+     */
+    public function more(Request $request) {
+
+      $limit = (isset($request->limit)) ? $request->limit : 10;
+
+      $posts = Post::orderBy('created_at', 'desc')
+                   ->take($limit)
+                   ->offset($request->offset)
+                   ->get();
+      return view('posts._list', compact('posts'));
     }
 
 }
